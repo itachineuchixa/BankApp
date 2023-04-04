@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BankApp.RegisterPage"
+             Title="RegisterPage"
+             Background="#00bf00"
+               Shell.NavBarIsVisible="False">
+    <Grid RowSpacing="5" Grid.Row="1" Margin="20,70,20,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BackgroundColor="Transparent" Grid.Row="0" HeightRequest="60" WidthRequest="60" Padding="0" 
+                   Margin="0,200,0,0" HorizontalOptions="Center">
+            <Image Source="logo_bank.png"/>
+        </Frame>
+        <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="Center">
+
+            <Frame BackgroundColor="#FFF" BorderColor="#000" CornerRadius="15" WidthRequest="300"  Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding UserName}" Placeholder="Name" TextColor="Black" 
+                               FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="15,2,20,2"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#FFF" BorderColor="#000" CornerRadius="15" WidthRequest="300" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding Password}" Placeholder="Surname" TextColor="Black" FontAttributes="Bold" 
+                               VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="15,2,20,2"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#FFF" BorderColor="#000" CornerRadius="15"  WidthRequest="300" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding UserName}" Placeholder="Phone" WidthRequest="300" TextColor="Black" 
+                               FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="15,2,20,2"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#FFF" BorderColor="#000" CornerRadius="15" WidthRequest="300" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding Password}" Placeholder="Username" TextColor="Black" FontAttributes="Bold" 
+                               VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="15,2,20,2"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#FFF" BorderColor="#000" CornerRadius="15" WidthRequest="300"  Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding UserName}" Placeholder="Password" TextColor="Black" 
+                               FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="15,2,20,2"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#FFF" BorderColor="#000" CornerRadius="15" WidthRequest="300" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding Password}" Placeholder=" Confirm Password" TextColor="Black" FontAttributes="Bold" 
+                               VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="15,2,20,2"/>
+                </StackLayout>
+            </Frame>
+            <Button Text="Confirm" BackgroundColor="#534D4D" TextColor="White" FontAttributes="Bold" CornerRadius="0" 
+                        WidthRequest="120" Margin="0,45,0,0" Command="{Binding LoginCommand}"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,160,0,0" Padding="0">
+                <Label Text="Банк Online" TextColor="DarkGray" FontSize="Small"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid> 
+</ContentPage>
